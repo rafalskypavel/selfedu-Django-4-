@@ -4,11 +4,10 @@ from django.urls import reverse
 from django.template.loader import render_to_string
 from django.template.defaultfilters import slugify
 
-menu = [
-    {'title': "О сайте", 'url_name': 'about'},
-    {'title': "Добавить статью", 'url_name': 'add_page'},
-    {'title': "Обратная связь", 'url_name': 'contact'},
-    {'title': "Войти", 'url_name': 'login'}
+menu = [{'title': "О сайте", 'url_name': 'about'},
+        {'title': "Добавить статью", 'url_name': 'add_page'},
+        {'title': "Обратная связь", 'url_name': 'contact'},
+        {'title': "Войти", 'url_name': 'login'}
 ]
 
 data_db = [
@@ -16,7 +15,6 @@ data_db = [
     {'id': 2, 'title': 'Марго Робби', 'content': 'Биография Марго Робби', 'is_published': False},
     {'id': 3, 'title': 'Джулия Робертс', 'content': 'Биография Джулия Робертс', 'is_published': True},
 ]
-
 
 def index(request):
     data = {
@@ -28,10 +26,12 @@ def index(request):
 
 
 def about(request):
-    return render(request, 'women/about.html', {'title': 'О сайте'})
+    return render(request, 'women/about.html', {'title': 'О сайте', 'menu': menu})
+
 
 def show_post(request, post_id):
     return HttpResponse(f"Отображение статьи с id = {post_id}")
+
 
 def addpage(request):
     return HttpResponse("Добавление статьи")
