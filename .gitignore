@@ -1,0 +1,19 @@
+# 🐍 Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+
+# ⚙️ Django
+*.log
+logs/
+.env
+*.env
+
+# 📂 Виртуальное окружение
+venv/
+
+# 📝 IDE и редакторы
+.vscode/
+.idea/
