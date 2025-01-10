@@ -1,0 +1,99 @@
+/* Основные переменные для цветов */
+:root {
+  --primary-bg: #f4f4f4; /* Светлый фон */
+  --header-bg: #3F4137; /* Темный фон для хедера и заголовков */
+  --breadcrumb-bg: #6A6E5D; /* Фон для хлебных крошек */
+  --table-row-bg: #f9f9f9; /* Светлый фон строк таблицы */
+  --table-row-hover-bg: #e9e9e9; /* Цвет фона при наведении */
+  --link-color: #007bff; /* Цвет ссылок */
+  --link-hover-color: #0056b3; /* Цвет ссылок при наведении */
+  --addlink-color: #28a745; /* Зеленый цвет для ссылок "Добавить" и "Изменить" */
+  --addlink-hover-color: #218838; /* Темно-зеленый при наведении */
+  --border-color: #ddd; /* Цвет для рамок */
+}
+
+/* Заголовки и элементы навигации */
+#header,
+.module caption,
+#changelist-filter h2 {
+  background: var(--header-bg); /* Фон для заголовков */
+  color: #fff; /* Белый цвет текста */
+  padding: 10px 20px; /* Отступы внутри заголовков */
+  font-size: 1.25rem; /* Увеличенный размер шрифта */
+  font-weight: bold; /* Жирное начертание */
+}
+
+/* Хлебные крошки */
+div.breadcrumbs {
+  background: var(--breadcrumb-bg); /* Фон хлебных крошек */
+  padding: 10px 20px; /* Отступы */
+  font-size: 1rem; /* Размер шрифта */
+  color: #fff; /* Белый цвет текста */
+}
+
+/* Основной контейнер */
+#content-main {
+  padding: 20px; /* Отступы внутри контейнера */
+  background-color: var(--primary-bg); /* Светлый фон */
+}
+
+/* Секции с контентом */
+.app-women,
+.app-auth {
+  margin-bottom: 30px; /* Отступ между секциями */
+  border: 1px solid var(--border-color); /* Легкая рамка */
+  border-radius: 8px; /* Закругленные углы */
+  background-color: #fff; /* Белый фон */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+  overflow: hidden; /* Прячем элементы, выходящие за границы */
+}
+
+/* Таблицы */
+table {
+  width: 100%; /* Ширина таблицы 100% */
+  border-collapse: collapse; /* Убирает промежутки между ячейками */
+  margin-top: 20px; /* Отступ сверху */
+}
+
+/* Заголовки таблиц */
+caption {
+  text-align: left; /* Выравнивание по левому краю */
+  font-size: 1.25rem; /* Увеличенный размер шрифта */
+  font-weight: bold; /* Жирный шрифт */
+  margin-bottom: 10px; /* Отступ снизу */
+}
+
+/* Строки таблиц */
+tr {
+  background-color: var(--table-row-bg); /* Фон для строк */
+  transition: background-color 0.3s ease; /* Плавный переход фона */
+}
+
+tr:hover {
+  background-color: var(--table-row-hover-bg); /* Цвет фона при наведении */
+}
+
+/* Ссылки */
+a {
+  text-decoration: none; /* Убирает подчеркивание */
+  color: var(--link-color); /* Цвет ссылок */
+  font-weight: normal; /* Обычный шрифт */
+  transition: color 0.3s ease; /* Плавное изменение цвета */
+}
+
+a:hover {
+  color: var(--link-hover-color); /* Цвет ссылок при наведении */
+}
+
+/* Ссылки для добавления и изменения */
+.addlink,
+.changelink {
+  color: var(--addlink-color); /* Зеленый цвет для "Добавить" и "Изменить" */
+  font-weight: bold; /* Полужирное начертание */
+  transition: color 0.3s ease; /* Плавное изменение цвета */
+}
+
+.addlink:hover,
+.changelink:hover {
+  color: var(--addlink-hover-color); /* Темно-зеленый цвет при наведении */
+}
